@@ -1,0 +1,22 @@
+{
+  "name": "ia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create_db": "node ./util/init_db.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config-lite": "^2.1.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-formidable": "^1.0.0",
+    "express-session": "^1.15.6",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.41.2"
+  }
+}

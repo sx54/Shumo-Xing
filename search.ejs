@@ -1,0 +1,24 @@
+<%- include("./header.ejs") %>
+
+    <div class="container-fluid answers">
+        <div class="row">
+            <div class="col-md-12  answers-count">
+                Congratulations!We found <%= dorms.length %>dorms you may wanna live!
+            </div>
+        </div>
+        <div class="row">
+            <%for (let i=0; i< dorms.length; i++) {%>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="/img/<%= dorms[i].img %>" />
+                    </div>
+                    <h4><a href="/show/<%= dorms[i].id %>"><%= dorms[i].name %></a></h4>
+                    <Addr><%= dorms[i].address %></Addr>
+                </div>
+            </div>
+            <%}%>
+        </div>
+
+    </div>
+<%- include("./footer.ejs") %>

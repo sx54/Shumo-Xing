@@ -1,0 +1,29 @@
+<%- include('../header') %>
+
+<div class="container answers">
+    <div class="row">
+        <h1 class="col-md-4">RU Dorming back-stage</h1>
+    </div>
+    <div class="row">
+        <a href="/admin/create" class="btn btn-success">Create a new one</a>
+    </div>
+    <div class="row"></div>
+    <table class="table">
+        <thead>
+            <td>Name</td>
+            <td>Total</td>
+            <td>Control</td>
+        </thead>
+        <tbody>
+            <% for (let dorm of dorms) { %>
+                <tr>
+                    <td><a href="/show/<%= dorm.id %>"><%= dorm.name %></a></td>
+                    <td><%= dorm.total %></td>
+                    <td class="tright"><a href="/admin/update/<%= dorm.id %>" class="btn btn-success">Edit</a><a href="/admin/delete/<%= dorm.id %>" class="btn btn-danger">Delete</a></td>
+                </tr>
+            <%}%>
+        </tbody>
+    </table>
+</div>
+
+<%- include("../footer.ejs") %>
